@@ -1,0 +1,24 @@
+{
+	"customers": [
+		{
+			"id": 1,
+			"name": "Akshay",
+			"address": "pune"
+		},
+		{
+			"id": 2,
+			"name": "Mahesh",
+			"address": "pune"
+		},
+		{
+			"id": 3,
+			"name": "Yogesh",
+			"address": "pune"
+		},
+		{
+			"id": 4,
+			"name": "Bhushan",
+			"address": "Nashik"
+		}
+	]
+}

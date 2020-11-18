@@ -1,0 +1,16 @@
+{
+	"orders": [
+		{
+			"id": 1,
+			"productId": 12,
+			"productName": "boat",
+			"createdAt": "2020-08-08"
+		},
+		{
+			"id": 2,
+			"productId": 13,
+			"productName": "Sony",
+			"createdAt": "2020-08-08"
+		}
+	]
+}

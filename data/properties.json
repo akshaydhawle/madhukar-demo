@@ -1,0 +1,14 @@
+{
+	"properties": [
+		{
+			"name": "villas 123",
+			"location": "pune",
+			"owner": "Akshay"
+		},
+		{
+			"name": "villas 43",
+			"location": "pune",
+			"owner": "Mahesh"
+		}
+	]
+}
