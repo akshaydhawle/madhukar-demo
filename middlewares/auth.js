@@ -10,6 +10,7 @@ module.exports.auth = (multiRole) => (req, res, next) => {
 
 		// decode token
 		const decoded = jwt.verify(token, JWT_SECRET);
+
 		// check current user access
 		if (!multiRole.includes(decoded.role)) return res.status(403).send('permission denied');
 

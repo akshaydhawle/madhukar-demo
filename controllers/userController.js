@@ -6,6 +6,7 @@ const {
 } = require('../config');
 // 2 min
 const { usersModel } = require('../models');
+const { fstat } = require('fs');
 
 const genSaltASync = promisify(bcrypt.genSalt);
 const hashASync = promisify(bcrypt.hash);
@@ -42,7 +43,10 @@ async function login(req, res) {
 
 async function register(req, res) {
 	try {
-		const { password } = req.body;
+		const { email, password } = req.body;
+
+		const usr = await usersModel.findOne({ email: email }, { _id: 1 });
+		if (usr) return res.status(409).send('user already exists');
 
 		// generate hash of password
 		// generate salt which can be used to combine with password to encrypt
@@ -67,6 +71,6 @@ async function register(req, res) {
 		// send token
 		res.status(201).send(token);
 	} catch (error) {
-		return res.status(500).send('internal server error');
+		return res.status(500).send(`internal server error ${error}`);
 	}
 }

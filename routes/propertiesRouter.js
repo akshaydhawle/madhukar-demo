@@ -6,7 +6,7 @@ const propertiesRouter = express.Router();
 
 propertiesRouter.get('/ping', PropertiesController.ping);
 
-propertiesRouter.use(auth('ADMIN'));
+propertiesRouter.use(auth(['ADMIN', 'USER']));
 propertiesRouter.get('/', PropertiesController.getProperties);
 
 module.exports = propertiesRouter;
